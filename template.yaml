@@ -21,7 +21,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: backend/
-      Handler: visitorCounter.handler # Refers to visitorCounter.js
+      Handler: visitorCounter.js # Refers to visitorCounter.js
       Runtime: nodejs18.x
       Architectures:
         - x86_64
