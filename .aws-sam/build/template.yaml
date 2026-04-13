@@ -47,4 +47,4 @@ Outputs:
   VisitApi:
     Description: New API Gateway endpoint URL
     Value:
-      Fn::Sub: https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/visit/
+      Fn::Sub: https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/visit
