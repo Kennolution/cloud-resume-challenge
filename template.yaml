@@ -21,7 +21,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: backend/
-      Handler: visitorCounter.js # Refers to visitorCounter.js
+      Handler: visitorCounter.handler # Refers to visitorCounter.js
       Runtime: nodejs18.x
       Architectures:
         - x86_64
@@ -49,4 +49,4 @@ Resources:
 Outputs:
   VisitApi:
     Description: "New API Gateway endpoint URL"
-    Value: !Sub "https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/visit/"
+    Value: !Sub "https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/visit"
