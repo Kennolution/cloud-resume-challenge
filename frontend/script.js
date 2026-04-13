@@ -27,7 +27,7 @@
     if (heroEl) heroEl.textContent = "...";
   }
 
-  const API_ENDPOINT = 'https://qss6drlfrc.execute-api.us-east-1.amazonaws.com/visitor-counter';
+  const API_ENDPOINT = 'https://6xf9audx0k.execute-api.us-east-1.amazonaws.com/Prod/visit/';
 
   async function updateVisitorCount() {
     setLoading();
