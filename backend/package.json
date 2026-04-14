@@ -1,5 +1,16 @@
 {
   "name": "visitor-counter",
   "version": "1.0.0",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "mocha tests/*.test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1030.0",
+    "@aws-sdk/lib-dynamodb": "^3.1030.0"
+  }
 }
