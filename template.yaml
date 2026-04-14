@@ -6,8 +6,12 @@ Resources:
   # The DynamoDB Table
   VisitorTable:
     Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain      # Adds the safety lock
+    UpdateReplacePolicy: Retain # Keeps data if the table is replaced
     Properties:
       TableName: cloud-resume-stats
+      SSESpecification:
+        SSEEnabled: true
       AttributeDefinitions:
         - AttributeName: id
           AttributeType: S
@@ -22,7 +26,7 @@ Resources:
     Properties:
       CodeUri: backend/
       Handler: visitorCounter.handler # Refers to visitorCounter.js
-      Runtime: nodejs18.x
+      Runtime: nodejs20.x
       Architectures:
         - x86_64
       Policies:
